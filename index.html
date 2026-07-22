@@ -9,6 +9,12 @@
 <meta property="og:title" content="Unity Coffee Cascais — peça antes, sem fila">
 <meta property="og:description" content="Menu digital: peça pelo telemóvel, pague online, levante à hora certa. Demo concept.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://ikartuzov-hub.github.io/unity-demo/">
+<meta property="og:image" content="https://ikartuzov-hub.github.io/unity-demo/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ikartuzov-hub.github.io/unity-demo/og.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -192,6 +198,16 @@ main{flex:1;padding:0 18px 130px}
 .demo-badge{position:fixed;top:0;left:50%;transform:translateX(-50%);z-index:60;
   background:var(--head);color:var(--bg);font:700 9.5px 'Inter';letter-spacing:1.4px;
   padding:3px 15px;border-radius:0 0 8px 8px;text-transform:uppercase}
+.ownerbox{margin:8px 18px 0;padding:20px 18px;text-align:center;background:var(--bg-2);
+  border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
+.ownerbox p{font-family:'Sora',sans-serif;font-weight:700;font-size:17px;color:var(--head);
+  margin-bottom:14px;line-height:1.3}
+.ownerbtn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;
+  font-family:'Sora',sans-serif;font-weight:700;font-size:15px;padding:12px 26px;border-radius:12px;
+  transition:.15s}
+.ownerbtn:active{transform:scale(.96)}
+.subsidy-note{display:block;font-size:12.5px;color:var(--dim);line-height:1.55;margin-top:14px;
+  max-width:360px;margin-left:auto;margin-right:auto}
 footer{padding:30px 18px 64px;text-align:center;font-size:15px;color:var(--dim);line-height:1.6}
 footer a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--accent);
   text-underline-offset:4px;display:inline-block;padding:8px 4px}
@@ -303,6 +319,11 @@ footer .demo-note{display:block;font-size:11px;margin-top:2px}
   </div>
 </div>
 
+<div class="ownerbox">
+  <p id="ownerQ"></p>
+  <a class="ownerbtn" id="ownerBtn" href="https://t.me/SeedWaveBot" target="_blank" rel="noopener"></a>
+  <span class="subsidy-note" id="subsidyNote"></span>
+</div>
 <footer>
   © <span id="yr"></span> <a href="https://ikartuzov-hub.github.io/seedwave-catalog/hub/" id="hubLink">SeedWave</a> · <a href="https://www.linkedin.com/in/igor-kartuzov" id="liLink">Igor Kartuzov</a>
   <span class="demo-note" id="footNote"></span>
@@ -323,7 +344,7 @@ pt:{hTitle:'Peça antes.\u00A0Sem fila.', hSub:'Menu digital pelo QR — sem ins
  hint:'Interface de demonstração — botões de pagamento são fictícios. No produto real o valor é calculado no servidor e o pagamento passa por um fornecedor licenciado.',
  done:'Pago. Pedido aceite!', steps:['Pagamento confirmado','Enviado para o bar','Em preparação','Pronto — levante no balcão'],
  again:'Novo pedido', share:'Enviar a um amigo', shareText:'Café sem fila ☕ Peça antes e levante pronto — Unity Coffee Cascais:',
- copied:'Link copiado ✓', badge:'Demo concept', footNote:'Demonstração de menu digital · não é um serviço oficial da Unity Coffee',
+ copied:'Link copiado ✓', badge:'Demo concept', ownerQ:'É dono de um café ou restaurante?',ownerBtn:'Quero isto no meu espaço →',subsidy:'💡 Soluções digitais como esta podem ser apoiadas por programas públicos de digitalização e eficiência energética (Portugal 2030). Consultoria e candidatura: fale connosco.',footNote:'Demonstração de menu digital · não é um serviço oficial da Unity Coffee',
  cats:{hot:'Café quente',cold:'Bebidas frias',breakfast:'Pequeno-almoço',brunch:'Brunch',dessert:'Sobremesas',tea:'Chá',bar:'Bar'},
  subs:{hot:'Torrefação própria · +0,5 copo take-away · +0,5 leite vegetal',cold:'Refrescantes, do bar da casa',breakfast:'Doce e salgado, toda a manhã',brunch:'Servido até às 20:00 — não até às 17:00',dessert:'Pergunte ao staff pelas sobremesas do dia',tea:'Folhas soltas, 400 ml',bar:'Vinho natural · cocktails · até Baileys'},
  tags:{hit:'bestseller',vegan:'vegan',new:'novo',rec:'recomendado',kids:'para crianças'}},
@@ -334,7 +355,7 @@ en:{hTitle:'Order ahead.\u00A0Skip the line.', hSub:'Digital menu via QR — no 
  hint:'Demo interface — payment buttons are mock. In the live product the total is calculated on the server and payments run through a licensed provider.',
  done:'Paid. Order accepted!', steps:['Payment confirmed','Sent to the bar','Being prepared','Ready — pick up at the counter'],
  again:'New order', share:'Send to a friend', shareText:'Coffee with no queue ☕ Order ahead & pick up ready — Unity Coffee Cascais:',
- copied:'Link copied ✓', badge:'Demo concept', footNote:'Digital menu demo · not an official Unity Coffee service',
+ copied:'Link copied ✓', badge:'Demo concept', ownerQ:'Own a café or restaurant?',ownerBtn:'I want this in my place →',subsidy:'💡 Digital solutions like this may qualify for public digitalization and energy-efficiency support (Portugal 2030). Consulting & application: get in touch.',footNote:'Digital menu demo · not an official Unity Coffee service',
  cats:{hot:'Hot coffee',cold:'Cold drinks',breakfast:'Breakfast',brunch:'Brunch',dessert:'Desserts',tea:'Tea',bar:'Bar'},
  subs:{hot:'Own roastery · +0.5 paper cup · +0.5 vegan milk',cold:'Fresh from the house bar',breakfast:'Sweet & savory, all morning',brunch:'Served till 20:00 — not 17:00',dessert:'Ask the staff about today\u2019s desserts',tea:'Loose leaf, 400 ml',bar:'Natural wine · cocktails · even Baileys'},
  tags:{hit:'bestseller',vegan:'vegan',new:'new',rec:'recommended',kids:'good for kids'}},
@@ -345,7 +366,7 @@ ru:{hTitle:'Закажи заранее.\u00A0Без очереди.', hSub:'Ц�
  hint:'Демо-интерфейс — кнопки оплаты условные. В боевом продукте сумма считается на сервере, оплата — через лицензированного провайдера.',
  done:'Оплачено. Заказ принят!', steps:['Оплата подтверждена','Передан на бар','Готовится','Готов — заберите на кассе'],
  again:'Новый заказ', share:'Отправить другу', shareText:'Кофе без очереди ☕ Закажи заранее и забери готовым — Unity Coffee Cascais:',
- copied:'Ссылка скопирована ✓', badge:'Демо-концепт', footNote:'Демо цифрового меню · не является официальным сервисом Unity Coffee',
+ copied:'Ссылка скопирована ✓', badge:'Демо-концепт', ownerQ:'Владеете кафе или рестораном?',ownerBtn:'Хочу так же у себя →',subsidy:'💡 Такие цифровые решения могут поддерживаться госпрограммами цифровизации и энергоэффективности (Portugal 2030). Консультация и подача заявки — напишите нам.',footNote:'Демо цифрового меню · не является официальным сервисом Unity Coffee',
  cats:{hot:'Горячий кофе',cold:'Холодные',breakfast:'Завтраки',brunch:'Бранч',dessert:'Десерты',tea:'Чай',bar:'Бар'},
  subs:{hot:'Собственная обжарка · +0,5 стакан с собой · +0,5 растительное молоко',cold:'Освежающие, из бара кофейни',breakfast:'Сладкие и сытные, всё утро',brunch:'Подаём до 20:00, а не до 17:00',dessert:'Спросите у команды десерты дня',tea:'Листовой, 400 мл',bar:'Натуральное вино · коктейли · даже Baileys'},
  tags:{hit:'бестселлер',vegan:'веган',new:'новинка',rec:'рекомендуем',kids:'детям'}},
@@ -356,7 +377,7 @@ es:{hTitle:'Pide antes.\u00A0Sin cola.', hSub:'Menú digital por QR — sin inst
  hint:'Interfaz de demostración — los botones de pago son ficticios. En el producto real el total se calcula en el servidor y el pago pasa por un proveedor licenciado.',
  done:'Pagado. ¡Pedido aceptado!', steps:['Pago confirmado','Enviado a la barra','En preparación','Listo — recoge en el mostrador'],
  again:'Nuevo pedido', share:'Enviar a un amigo', shareText:'Café sin cola ☕ Pide antes y recoge listo — Unity Coffee Cascais:',
- copied:'Enlace copiado ✓', badge:'Demo concept', footNote:'Demo de menú digital · no es un servicio oficial de Unity Coffee',
+ copied:'Enlace copiado ✓', badge:'Demo concept', ownerQ:'¿Tienes un café o restaurante?',ownerBtn:'Lo quiero en mi local →',subsidy:'💡 Soluciones digitales como esta pueden recibir apoyo de programas públicos de digitalización y eficiencia energética (Portugal 2030). Consultoría y candidatura: contáctenos.',footNote:'Demo de menú digital · no es un servicio oficial de Unity Coffee',
  cats:{hot:'Café caliente',cold:'Bebidas frías',breakfast:'Desayuno',brunch:'Brunch',dessert:'Postres',tea:'Té',bar:'Bar'},
  subs:{hot:'Tueste propio · +0,5 vaso take-away · +0,5 leche vegetal',cold:'Refrescantes, del bar de la casa',breakfast:'Dulce y salado, toda la mañana',brunch:'Servido hasta las 20:00 — no hasta las 17:00',dessert:'Pregunta al equipo por los postres del día',tea:'Hoja suelta, 400 ml',bar:'Vino natural · cócteles · hasta Baileys'},
  tags:{hit:'superventas',vegan:'vegano',new:'nuevo',rec:'recomendado',kids:'para niños'}},
@@ -367,7 +388,7 @@ de:{hTitle:'Vorbestellen.\u00A0Ohne Schlange.', hSub:'Digitale Karte per QR — 
  hint:'Demo-Oberfläche — Zahlungsbuttons sind Attrappen. Im echten Produkt wird die Summe serverseitig berechnet, Zahlung über lizenzierten Anbieter.',
  done:'Bezahlt. Bestellung angenommen!', steps:['Zahlung bestätigt','An die Bar gesendet','In Zubereitung','Fertig — Abholung am Tresen'],
  again:'Neue Bestellung', share:'An Freunde senden', shareText:'Kaffee ohne Schlange ☕ Vorbestellen & fertig abholen — Unity Coffee Cascais:',
- copied:'Link kopiert ✓', badge:'Demo-Konzept', footNote:'Demo einer digitalen Karte · kein offizieller Unity-Coffee-Service',
+ copied:'Link kopiert ✓', badge:'Demo-Konzept', ownerQ:'Haben Sie ein Café oder Restaurant?',ownerBtn:'Das will ich auch →',subsidy:'💡 Digitale Lösungen wie diese können durch öffentliche Programme zur Digitalisierung und Energieeffizienz gefördert werden (Portugal 2030). Beratung & Antrag: sprechen Sie uns an.',footNote:'Demo einer digitalen Karte · kein offizieller Unity-Coffee-Service',
  cats:{hot:'Heißer Kaffee',cold:'Kalte Getränke',breakfast:'Frühstück',brunch:'Brunch',dessert:'Desserts',tea:'Tee',bar:'Bar'},
  subs:{hot:'Eigene Rösterei · +0,5 Becher to go · +0,5 Pflanzenmilch',cold:'Erfrischend, aus der Hausbar',breakfast:'Süß & herzhaft, den ganzen Morgen',brunch:'Serviert bis 20:00 — nicht bis 17:00',dessert:'Fragen Sie das Team nach den Desserts des Tages',tea:'Loser Tee, 400 ml',bar:'Naturwein · Cocktails · sogar Baileys'},
  tags:{hit:'Bestseller',vegan:'vegan',new:'neu',rec:'empfohlen',kids:'für Kinder'}}
@@ -613,6 +634,7 @@ function renderStatic(){
   $('ctHint').textContent=t().hint;$('sTitle').textContent=t().done;
   $('sAgain').textContent=t().again;$('shareBtn').textContent=t().share;
   $('demoBadge').textContent=t().badge;$('footNote').textContent=t().footNote;
+  $('ownerQ').textContent=t().ownerQ;$('ownerBtn').textContent=t().ownerBtn;$('subsidyNote').textContent=t().subsidy;
   document.documentElement.lang=lang;
   /* язык едет сквозь ссылки экосистемы */
   $('hubLink').href='https://ikartuzov-hub.github.io/seedwave-catalog/hub/?lang='+lang+'&theme='+theme;
