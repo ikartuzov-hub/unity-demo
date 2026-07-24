@@ -1,0 +1,16 @@
+{
+  "name": "Unity Coffee — order ahead",
+  "short_name": "Unity Coffee",
+  "description": "Digital menu: order ahead from your phone, pay online, pick up on time. Demo concept by SeedWave.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FAF4E8",
+  "theme_color": "#7E2B3D",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "unity-icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
