@@ -20,11 +20,11 @@
 <meta property="og:site_name" content="SeedWave">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ikartuzov-hub.github.io/unity-demo/">
-<meta property="og:image" content="https://ikartuzov-hub.github.io/unity-demo/og.jpg">
+<meta property="og:image" content="https://ikartuzov-hub.github.io/unity-demo/og-pt.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://ikartuzov-hub.github.io/unity-demo/og.jpg">
+<meta name="twitter:image" content="https://ikartuzov-hub.github.io/unity-demo/og-pt.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -602,6 +602,7 @@ const ITEM_PHOTO={'hot_3':'flatwhite','breakfast_0':'syrniki','breakfast_2':'tof
 const qs = new URLSearchParams(location.search);
 let lang = qs.get('lang') || 'pt'; if(!UI[lang]) lang='pt';
 let theme = qs.get('theme') || localStorage.getItem('uc_theme') || 'light';
+if(theme==='night')theme='dark'; if(theme==='day')theme='light';   /* совместимость с install-страницей SeedWave */
 let cart = {}, activeCat = 'hot', when = 'asap', customT = '';
 
 const $=id=>document.getElementById(id);
